@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mahdi Amrollahi Biouki Resume Website
+
+A modern personal resume and portfolio website for **Mahdi Amrollahi Biouki**. The site presents Mahdi as a backend developer and AI researcher through a focused, visual, and evidence-driven interface instead of a typical resume template.
+
+The design combines a strong first viewport, GitHub-backed project highlights, a backend and AI capability map, a working narrative, and a downloadable resume PDF.
+
+## Highlights
+
+- Custom modern resume layout built with the Next.js App Router.
+- Responsive first-screen portfolio experience with profile image, resume action, and GitHub action.
+- Selected project section featuring public repositories across AI agents, RAG, NLP, Rust services, and backend practice.
+- Capability map for backend systems, data infrastructure, AI engineering, and research foundations.
+- Downloadable PDF resume included as a public asset.
+- Custom SVG favicon aligned with the site's visual identity.
+- Offline-friendly styling with system font stacks, avoiding build-time Google font fetching.
+
+## Tech Stack
+
+- **Framework:** Next.js 16
+- **Runtime UI:** React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4 plus custom global CSS
+- **Linting:** ESLint with Next.js config
+
+## Project Structure
+
+```text
+app/
+  globals.css        Global styles, custom visual system, responsive rules
+  icon.svg           Custom app icon / favicon
+  layout.tsx         Root layout and metadata
+  page.tsx           Main resume website
+
+public/
+  Mahdi_Amrollahi_Biouki_Resume.pdf
+  mahdi-avatar.jpg
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local site:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If port `3000` is already in use, run Next on another port:
 
-## Learn More
+```bash
+npx next dev --port 3001
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Starts the local development server.
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Creates an optimized production build.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run start
+```
+
+Starts the production server after a successful build.
+
+```bash
+npm run lint
+```
+
+Runs ESLint checks.
+
+## Content Sources
+
+The website uses:
+
+- The resume PDF at `public/Mahdi_Amrollahi_Biouki_Resume.pdf`
+- The profile image at `public/mahdi-avatar.jpg`
+- Public GitHub profile and repository information from:
+  - <https://github.com/MahdiAmrollahi>
+
+## Customization
+
+Most visible content lives in `app/page.tsx`:
+
+- `projects` controls the featured repository rows.
+- `skills` controls the capability map.
+- `signals` controls the GitHub/profile metrics.
+- `timeline` controls the working narrative section.
+
+Main visual styling lives in `app/globals.css`, including:
+
+- Hero grid background
+- Action buttons
+- Project rows
+- Skill blocks
+- Timeline styling
+- Responsive behavior
+
+To update the resume PDF, replace:
+
+```text
+public/Mahdi_Amrollahi_Biouki_Resume.pdf
+```
+
+To update the avatar, replace:
+
+```text
+public/mahdi-avatar.jpg
+```
+
+## Validation
+
+Before shipping changes, run:
+
+```bash
+npm run lint
+npm run build
+```
+
+Both commands should complete successfully.
+
+## Deployment
+
+This is a standard Next.js app and can be deployed to platforms such as Vercel, Netlify, Render, or any Node-compatible hosting provider.
+
+For Vercel:
+
+1. Push the repository to GitHub.
+2. Import it in Vercel.
+3. Keep the default Next.js build settings.
+4. Deploy.
+
+The production build command is:
+
+```bash
+npm run build
+```
+
+The output is handled by Next.js according to the deployment provider.
+
+## License
+
+This project is a personal resume website for Mahdi Amrollahi Biouki. Reuse the structure if helpful, but replace all personal content, assets, resume files, and identity-specific branding before publishing your own version.
