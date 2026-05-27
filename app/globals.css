@@ -64,6 +64,15 @@ a {
   box-shadow: 0 0 0 8px rgba(213, 255, 95, 0.12);
 }
 
+.hero-title {
+  font-size: clamp(3rem, 7.2vw, 6.7rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 0.92;
+  max-width: 13ch;
+  text-wrap: balance;
+}
+
 .action {
   align-items: center;
   border-radius: 999px;
@@ -145,11 +154,12 @@ a {
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 7vw, 5.6rem);
+  font-size: clamp(2.45rem, 5.1vw, 4.45rem);
   font-weight: 950;
   letter-spacing: 0;
-  line-height: 0.95;
+  line-height: 1;
   margin-top: 0.7rem;
+  max-width: 12ch;
   text-wrap: balance;
 }
 
@@ -177,7 +187,7 @@ a {
 
 .project-index {
   color: rgba(17, 19, 15, 0.35);
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-mono);
   font-weight: 900;
 }
 
@@ -198,7 +208,7 @@ a {
 .stack {
   border-left: 2px solid #d5ff5f;
   color: rgba(17, 19, 15, 0.55);
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 800;
   grid-column: 2;
@@ -270,6 +280,16 @@ a {
 }
 
 @media (max-width: 700px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 15vw, 4.25rem);
+    max-width: 10ch;
+  }
+
+  .section-title {
+    font-size: clamp(2.35rem, 12vw, 3.7rem);
+    max-width: 11ch;
+  }
+
   .project-row {
     grid-template-columns: 1fr;
   }

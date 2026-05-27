@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f5f2ea] text-[#11130f]">
       <section className="hero-grid relative min-h-[94vh] border-b border-black/10 px-5 py-5 sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6">
+        <div className="mx-auto flex max-w-[92rem] flex-col gap-6">
           <nav className="flex items-center justify-between gap-4 text-sm font-semibold uppercase tracking-[0.18em] text-black/60">
             <span>Mahdi Amrollahi Biouki</span>
             <div className="flex gap-3 tracking-normal normal-case">
@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className="grid flex-1 gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+          <div className="grid flex-1 gap-5 lg:grid-cols-[1.12fr_0.88fr] lg:items-stretch">
             <div className="flex min-h-[70vh] flex-col justify-between gap-8 rounded-[28px] border border-black/10 bg-[#11130f] p-6 text-[#f8f4e8] shadow-2xl shadow-black/15 sm:p-10">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="status-dot" />
@@ -94,7 +94,7 @@ export default function Home() {
                 <p className="mb-5 font-mono text-sm uppercase tracking-[0.22em] text-white/45">
                   Tehran-time builder with a research engine
                 </p>
-                <h1 className="text-balance text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl">
+                <h1 className="hero-title">
                   Systems that think clearly, ship cleanly, and leave useful traces.
                 </h1>
               </div>
@@ -164,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-5 px-5 py-14 sm:px-8 lg:grid-cols-[0.65fr_1.35fr] lg:px-12">
+      <section className="mx-auto grid max-w-[92rem] gap-7 px-5 py-14 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-10">
         <div>
           <p className="eyebrow">Selected repositories</p>
           <h2 className="section-title">Proof, not decoration.</h2>
@@ -191,7 +191,7 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/10 bg-[#101820] px-5 py-14 text-white sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.4fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.9fr_1.5fr]">
           <div>
             <p className="eyebrow text-[#d5ff5f]">Capability map</p>
             <h2 className="section-title text-white">Modern backend with AI depth.</h2>
@@ -211,8 +211,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="mx-auto max-w-[92rem] px-5 py-14 sm:px-8 lg:px-10">
+        <div className="grid gap-8 lg:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="eyebrow">Working narrative</p>
             <h2 className="section-title">A resume that moves like a system diagram.</h2>
