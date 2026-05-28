@@ -2,6 +2,14 @@ import Image from "next/image";
 
 const projects = [
   {
+    name: "BatBooks Backend",
+    type: "Django backend platform",
+    stack: "Python, Django, DevOps, architecture",
+    description:
+      "A production-minded books backend with full Django settings, clean architecture, and deployment-focused DevOps structure.",
+    href: "https://github.com/batbooks/backend",
+  },
+  {
     name: "Self-Corrective RAG",
     type: "Adaptive retrieval agent",
     stack: "Python, LangGraph, LlamaIndex",
