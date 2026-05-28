@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ProjectShowcase } from "./project-showcase";
 
 const projects = [
   {
@@ -181,21 +182,7 @@ export default function Home() {
             backend services, AI agents, retrieval systems, and learning labs.
           </p>
         </div>
-        <div className="grid gap-3">
-          {projects.map((project, index) => (
-            <a className="project-row" href={project.href} key={project.name}>
-              <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-black/45">
-                  {project.type}
-                </p>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-              </div>
-              <span className="stack">{project.stack}</span>
-            </a>
-          ))}
-        </div>
+        <ProjectShowcase projects={projects} />
       </section>
 
       <section className="border-y border-black/10 bg-[#101820] px-5 py-14 text-white sm:px-8 lg:px-12">

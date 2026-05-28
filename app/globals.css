@@ -215,6 +215,42 @@ a {
   padding-left: 0.9rem;
 }
 
+.project-toggle {
+  align-items: center;
+  background: #11130f;
+  border: 1px solid rgba(17, 19, 15, 0.16);
+  color: #f8f4e8;
+  cursor: pointer;
+  display: flex;
+  font-weight: 900;
+  justify-content: space-between;
+  min-height: 4.25rem;
+  padding: 0 1.1rem 0 3rem;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+  width: 100%;
+}
+
+.project-toggle:hover {
+  background: #20251d;
+  transform: translateX(4px);
+}
+
+.project-toggle-icon {
+  align-items: center;
+  background: #d5ff5f;
+  border-radius: 999px;
+  color: #11130f;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  height: 2.2rem;
+  justify-content: center;
+  line-height: 1;
+  width: 2.2rem;
+}
+
 .skill-block {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 22px;
@@ -296,6 +332,10 @@ a {
 
   .stack {
     grid-column: auto;
+  }
+
+  .project-toggle {
+    padding-left: 1.1rem;
   }
 
   .nav-link {
