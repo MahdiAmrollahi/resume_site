@@ -1,10 +1,71 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://resume-site-1.vercel.app";
+const title = "Mahdi Amrollahi Biouki | Backend Developer & AI Researcher";
+const description =
+  "Backend developer and AI researcher building Django systems, production-minded APIs, RAG agents, NLP projects, and applied machine learning experiments.";
+
 export const metadata: Metadata = {
-  title: "Mahdi Amrollahi Biouki | Backend Developer & AI Researcher",
-  description:
-    "A modern resume portfolio for Mahdi Amrollahi Biouki, focused on backend systems, AI agents, RAG, NLP, and applied machine learning.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  applicationName: "Mahdi Amrollahi Biouki Resume",
+  authors: [{ name: "Mahdi Amrollahi Biouki", url: "https://github.com/MahdiAmrollahi" }],
+  creator: "Mahdi Amrollahi Biouki",
+  publisher: "Mahdi Amrollahi Biouki",
+  keywords: [
+    "Mahdi Amrollahi Biouki",
+    "MahdiAmrollahi",
+    "Backend Developer",
+    "AI Researcher",
+    "Django Developer",
+    "Python Developer",
+    "RAG",
+    "LangChain",
+    "LlamaIndex",
+    "NLP",
+    "PostgreSQL",
+    "Docker",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Mahdi Amrollahi Biouki Resume",
+    type: "profile",
+    images: [
+      {
+        url: "/mahdi-avatar.jpg",
+        width: 460,
+        height: 460,
+        alt: "Mahdi Amrollahi Biouki",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: ["/mahdi-avatar.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  verification: {
+    google: "qo7ibIgrN20ITXP7yU0z2kcUTSTGDQGOCE7U9Zt8mAk",
+  },
 };
 
 export default function RootLayout({
