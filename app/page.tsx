@@ -11,6 +11,14 @@ const projects = [
     href: "https://github.com/batbooks/backend",
   },
   {
+    name: "CV Classroom Analytics",
+    type: "Computer vision analytics",
+    stack: "Python, CV, face recognition, reports",
+    description:
+      "A smart classroom analysis system that processes class videos for attendance, engagement signals, and statistical reports.",
+    href: "https://github.com/MahdiAmrollahi/CV-Classroom-Analytics",
+  },
+  {
     name: "Self-Corrective RAG",
     type: "Adaptive retrieval agent",
     stack: "Python, LangGraph, LlamaIndex",
