@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://resume-site-1.vercel.app";
+const siteUrl = "https://mahdiamrollahibiouki.vercel.app";
 const title = "Mahdi Amrollahi Biouki | Backend Developer & AI Researcher";
 const description =
   "Backend developer and AI researcher building Django systems, production-minded APIs, RAG agents, NLP projects, and applied machine learning experiments.";
