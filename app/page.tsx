@@ -306,8 +306,13 @@ export default function Home() {
                     Current profile
                   </p>
                   <h2 className="mt-2 text-3xl font-black">MahdiAmrollahi</h2>
+                  <p className="mt-2 text-sm leading-5 text-black/65">
+                    Backend Developer / AI Researcher
+                    <br />
+                    Building at the intersection of APIs and agents.
+                  </p>
                 </div>
-                <div className="mt-auto grid grid-cols-2 gap-3 pt-6">
+                <div className="mt-6 grid grid-cols-2 gap-3">
                   {signals.map((item) => (
                     <div className="metric" key={item.label}>
                       <span>{item.value}</span>
