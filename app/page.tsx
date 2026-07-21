@@ -228,7 +228,7 @@ export default function Home() {
               <a className="nav-link" href="https://github.com/MahdiAmrollahi">
                 GitHub
               </a>
-              <a className="nav-link" href="https://www.linkedin.com/in/mahdi-amrollahi-248442254">
+              <a className="nav-link" href="https://www.linkedin.com/in/mahdi-amrollahi-biouki-248442254">
                 LinkedIn
               </a>
               <a className="nav-link" href="mailto:mahdiamr83@gmail.com">
@@ -500,7 +500,7 @@ export default function Home() {
             <a className="footer-link" href="https://github.com/MahdiAmrollahi">
               GitHub
             </a>
-            <a className="footer-link" href="https://www.linkedin.com/in/mahdi-amrollahi-248442254">
+            <a className="footer-link" href="https://www.linkedin.com/in/mahdi-amrollahi-biouki-248442254">
               LinkedIn
             </a>
             <a className="footer-link" href="mailto:mahdiamr83@gmail.com">
