@@ -12,21 +12,30 @@ type Project = {
 
 type ProjectShowcaseProps = {
   projects: Project[];
-  initialCount?: number;
+  variant?: "light" | "dark";
+  githubHref?: string;
 };
+
+const FIRST_STEP = 3;
+const SECOND_STEP = 6;
 
 export function ProjectShowcase({
   projects,
-  initialCount = 3,
+  variant = "light",
+  githubHref = "https://github.com/MahdiAmrollahi",
 }: ProjectShowcaseProps) {
-  const [expanded, setExpanded] = useState(false);
-  const visibleProjects = expanded ? projects : projects.slice(0, initialCount);
-  const hiddenCount = Math.max(projects.length - initialCount, 0);
+  const [step, setStep] = useState<0 | 1>(0);
+
+  const visibleCount = step === 0 ? FIRST_STEP : SECOND_STEP;
+  const visibleProjects = projects.slice(0, visibleCount);
+  const rowClass = variant === "dark" ? "project-row project-row-dark" : "project-row";
+  const toggleClass =
+    variant === "dark" ? "project-toggle project-toggle-dark" : "project-toggle";
 
   return (
     <div className="grid gap-3">
       {visibleProjects.map((project, index) => (
-        <a className="project-row" href={project.href} key={project.name}>
+        <a className={rowClass} href={project.href} key={project.name}>
           <span className="project-index">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -41,17 +50,36 @@ export function ProjectShowcase({
         </a>
       ))}
 
-      {hiddenCount > 0 ? (
+      {step === 0 ? (
         <button
-          className="project-toggle"
+          className={toggleClass}
           type="button"
-          aria-expanded={expanded}
-          onClick={() => setExpanded((current) => !current)}
+          onClick={() => setStep(1)}
         >
-          <span>{expanded ? "Show fewer projects" : `Show ${hiddenCount} more projects`}</span>
-          <span className="project-toggle-icon">{expanded ? "-" : "+"}</span>
+          <span>{`Show ${SECOND_STEP - FIRST_STEP} more projects`}</span>
+          <span className="project-toggle-icon">+</span>
         </button>
-      ) : null}
+      ) : (
+        <>
+          <a
+            className={`${toggleClass} project-github-cta`}
+            href={githubHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>View all on GitHub</span>
+            <span className="project-toggle-icon project-github-icon">↗</span>
+          </a>
+          <button
+            className={`${toggleClass} project-less-cta`}
+            type="button"
+            onClick={() => setStep(0)}
+          >
+            <span>Show fewer projects</span>
+            <span className="project-toggle-icon project-less-icon">−</span>
+          </button>
+        </>
+      )}
     </div>
   );
 }
