@@ -169,7 +169,7 @@ const experience = [
   {
     role: "AI Developer",
     company: "Comfyuse",
-    period: "07/2025 – Present",
+    period: "07/2025 – 02/2026",
     location: "Tehran, Iran",
     bullets: [
       "Designed and developed scalable backend systems and RESTful APIs using Python, Django, DRF, PostgreSQL, and Redis.",
@@ -182,7 +182,7 @@ const experience = [
   {
     role: "Backend Developer — AI-Powered",
     company: "Painfools Studio",
-    period: "07/2025 – 11/2025",
+    period: "07/2025 – 10/2025",
     location: "Tehran, Iran",
     bullets: [
       "Developed backend services and RESTful APIs for a multiplayer game using Django and Django REST Framework.",
